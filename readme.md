@@ -17,3 +17,4 @@ Doony is custom CSS and yavascript for jenkins
 - Removes a lot of the useless icons
 - Hover menus have a pointer cursor, indicating clickability
 - Text inputs are friendlier, bigger
+- Builds are zebra-striped, have more padding
