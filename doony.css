@@ -4,8 +4,24 @@ body, table, form, input, td, th, p, textarea, select {
     color: #333;
 }
 
-pre, code {
+pre, code, .CodeMirror {
     font-family: Consolas, Monaco, monospace;
+}
+
+.cm-s-default {
+    border: none !important;
+}
+
+input[type="text"], 
+input[type="number"],
+select, 
+textarea,
+.CodeMirror
+{
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 input[type="text"], 
@@ -13,11 +29,11 @@ input[type="number"],
 select, 
 textarea
 {
-    font-size: 16px;
-    border-radius: 3px;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+#main-table {
+    background-image: none !important;
 }
 
 #tasks {
@@ -26,32 +42,46 @@ textarea
     margin-right: 30px;
 }
 
-.task {
-    margin-bottom: 20px;
+.task a:nth-child(2) {
+    padding: 10px 30px 10px 10px;
+    display: block;
 }
 
+.task a:first-child,
 .task img {
     display: none;
 }
 
 #top-panel {
-    background-color: #463265;
+    background-color: #CE3920;
     background-url: none;
     background-image: none;
-}
-
-#top-panel td:first-child a:before {
-    content: "Jenkins";
-    color: #eee;
-    font-size: 24px;
-    display: inline;
-    margin-left: 10px;
-    margin-top: 20px;
-    vertical-align: center;
+    border-bottom: 1px solid #ccc;
 }
 
 #top-panel img {
     display: none;
+}
+
+#buildHistory .pane-header {
+    font-size: 16px;
+}
+
+#buildHistory .build-row td:not(.pane-header) {
+    padding: 10px 0 10px;
+}
+
+#buildHistory .build-row:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+
+#buildHistory .build-row {
+    border-top: 1px solid #ddd;
+}
+
+#doony-title {
+    color: #fff;
+    margin: 5px 10px;
 }
 
 #search-box {
@@ -61,7 +91,7 @@ textarea
     margin: 7px;
 }
 
-#main-panel pre {
+#main-panel > pre {
     font-size: 14px;
     background-color: #111;
     color: #eee;
