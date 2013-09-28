@@ -1,3 +1,4 @@
+
 body, table, form, input, td, th, p, textarea, select {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -540,6 +541,24 @@ textarea
     background-image: none !important;
 }
 
+/********************   top panel styles      ***********************/
+#top-panel {
+    background-url: none;
+    background-image: none;
+    border-bottom: 1px solid #ccc;
+}
+
+#top-panel img {
+    display: none;
+}
+
+#search-box {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-image: none;
+    margin: 7px;
+}
+
 /******************* side panel styles ***********************/
 #side-panel {
     padding-left: 15px;
@@ -559,17 +578,6 @@ textarea
 
 .task a:first-child,
 .task img {
-    display: none;
-}
-
-#top-panel {
-    /*background-color: #CE3920;*/
-    background-url: none;
-    background-image: none;
-    border-bottom: 1px solid #ccc;
-}
-
-#top-panel img {
     display: none;
 }
 
@@ -597,13 +605,10 @@ textarea
     top: 50%;
 }
 
-#search-box {
-    font-size: 16px;
-    padding: 5px 10px;
-    background-image: none;
-    margin: 7px;
-}
-
+/* 
+ * The console output doesn't have an ID on it, sadly, so style its place in
+ * the DOM and hope nothing else is affected
+ */
 #main-panel > pre {
     font-size: 14px;
     background-color: #111;
@@ -612,11 +617,28 @@ textarea
     border-radius: 3px;
 }
 
+/**
+ * Set the link color in console output
+ */
 #main-panel pre a,
 #main-panel pre a:visited {
     color: #c7254e;
 }
+/** style permalinks **/
+#main-panel > ul {
+    padding-left: 0;
+    list-style-type: none;
+}
 
+#main-panel > ul .model-link,
+#main-panel > ul li 
+{
+    padding-bottom: 7px;
+}
+
+#main-panel {
+    padding-left: 15px;
+}
 a.yuimenulabel, a.yuimenuitemlabel,
 .yui-skin-sam .yuimenuitemlabel
 {
@@ -638,3 +660,21 @@ a.yuimenulabel, a.yuimenuitemlabel,
     margin: 5px 10px;
 }
 
+/* copied from twitter bootstrap */
+.doony-callout {
+    margin: 0;
+    padding: 20px 30px 20px 25px;
+    border-left: 5px solid #eee;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.doony-callout a {
+    text-decoration: none;
+}
+
+.doony-callout-info {
+    background-color: #f0f7fd;
+    border-color: #d0e3f0;
+}

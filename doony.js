@@ -33,6 +33,10 @@ jQuery(function($) {
         return path.match(/^\/job\/.*?\//) !== null;
     }
 
+    var isJobHomepage = function(path) {
+        return path.match(/^\/job\/.*?\/$/) !== null;
+    }
+
     // note: this function assumes you're already on a job page
     var getJobUrl = function(path) {
         return path.match(/^\/job\/.*?\//)[0];
@@ -77,6 +81,18 @@ jQuery(function($) {
         });
     });
 
+    if (isJobHomepage(window.location.pathname)) {
+        var jobUrl = getJobUrl(window.location.pathname);
+        $.get(jobUrl + 'api/json?tree=lastBuild[number]', function(data) {
+            console.log(data.lastBuild.number);
+            var message = "View console output for the latest test"
+            var href = jobUrl + data.lastBuild.number + '/consoleFull';
+            var h2 = $("h2:contains('Permalinks')");
+            h2.after("<div class='doony-callout doony-callout-info'><a href='" +
+                href + "'>" + message + "</a></div>");
+        });
+    }
+
     if (isJobPage(window.location.pathname)) {
         var button = document.createElement('button');
         button.className = "btn btn-primary doony-build";
@@ -102,7 +118,7 @@ jQuery(function($) {
         $(document).on('click', '#doony-clear-build', function(e) {
             e.preventDefault();
             var jobUrl = getJobUrl(window.location.pathname);
-            $.get(jobUrl + 'api/json?depth=1&tree=lastBuild[number]', function(data) {
+            $.get(jobUrl + 'api/json?tree=lastBuild[number]', function(data) {
                 $.post(jobUrl + data.lastBuild.number + '/stop');
             });
         });
