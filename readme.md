@@ -51,9 +51,20 @@ Doony is custom CSS and yavascript for jenkins
 
 4. Click "Save". Enjoy!
 
-## Known Issues
+### Chrome Extension
 
-This doesn't work well with multi-job configuration.
+You can also run this as a Chrome extension.
+
+1. Clone this repo locally.
+
+2. Edit the `matches` value of the `manifest.json` file to contain the server
+names of your Jenkins servers (see [Match Patterns][patterns]).
+
+3. Open [[chrome://extensions]] and click "Load unpacked extension".
+
+4. Navigate to this repo and click "Open"
+
+[patterns]: http://developer.chrome.com/extensions/match_patterns.html
 
 ## Compatibility
 
