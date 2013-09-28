@@ -53,7 +53,7 @@ textarea
 }
 
 #top-panel {
-    background-color: #CE3920;
+    /*background-color: #CE3920;*/
     background-url: none;
     background-image: none;
     border-bottom: 1px solid #ccc;
@@ -68,7 +68,7 @@ textarea
 }
 
 #buildHistory .build-row td:not(.pane-header) {
-    padding: 10px 0 10px;
+    padding: 10px 0 10px 10px;
 }
 
 #buildHistory .build-row:nth-child(2n) {
@@ -77,6 +77,14 @@ textarea
 
 #buildHistory .build-row {
     border-top: 1px solid #ddd;
+}
+
+#buildHistory .build-row:last-child {
+    display: none;
+}
+
+.healthReport img {
+    top: 50%;
 }
 
 #doony-title {
