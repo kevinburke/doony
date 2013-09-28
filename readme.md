@@ -27,7 +27,9 @@ Doony is custom CSS and yavascript for jenkins
 ## Installation
 
 1. Install the [JQuery Plugin][jquery]
+
 2. Install the ["Simple Theme" Plugin][simple]
+
 3. In Jenkins, click "Manage Jenkins", then "Configure System", then specify
    the CSS and Javascript URL's for this theme. You should find a place to host
    these, on a static server inside your cluster.
