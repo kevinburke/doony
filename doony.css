@@ -1,5 +1,13 @@
-
-body, table, form, input, td, th, p, textarea, select {
+body.yui-skin-sam, 
+.yui-skin-sam table,
+.yui-skin-sam form,
+.yui-skin-sam input,
+.yui-skin-sam td,
+.yui-skin-sam th,
+.yui-skin-sam p,
+.yui-skin-sam textarea,
+.yui-skin-sam select 
+{
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 13px;
     color: #333;
@@ -542,17 +550,17 @@ textarea
 }
 
 /********************   top panel styles      ***********************/
-#top-panel {
+.yui-skin-sam #top-panel {
     background-url: none;
     background-image: none;
     border-bottom: 1px solid #ccc;
 }
 
-#top-panel img {
+.yui-skin-sam #top-panel img {
     display: none;
 }
 
-#search-box {
+.yui-skin-sam #search-box {
     font-size: 16px;
     padding: 5px 10px;
     background-image: none;
@@ -670,7 +678,9 @@ a.yuimenulabel, a.yuimenuitemlabel,
     display: inline-block;
 }
 
-.doony-callout a {
+.doony-callout a,
+#matrix .doony-callout a,
+.doony-callout a:visited {
     text-decoration: none;
 }
 
@@ -678,3 +688,8 @@ a.yuimenulabel, a.yuimenuitemlabel,
     background-color: #f0f7fd;
     border-color: #d0e3f0;
 }
+
+.doony-downstream-link {
+    display: block;
+}
+

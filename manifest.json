@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Jenkins - Doony theme",
+  "description": "A prettier Jenkins with better actions.",
+  "version": "1.1",
+
+  "content_scripts": [
+    {
+      "__comment__": "You need to add your own URL's here.",
+      "matches": [
+      ],
+      "css": ["doony.css"],
+      "js": ["jquery-2.0.3.js", "doony.js"]
+    }
+   ]
+}
