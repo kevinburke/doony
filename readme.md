@@ -4,7 +4,7 @@ Doony is custom CSS and yavascript for jenkins
 
 ### Before
 
-<img src="https://api.monosnap.com/image/download?id=XKLAxd0tYZWgWH0GKyWpccQny" />
+<img src="https://api.monosnap.com/image/download?id=tyH5frYrtWOizYJLkxWstROHM" />
 
 ### After
 
