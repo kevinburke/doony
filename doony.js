@@ -31,15 +31,18 @@ jQuery(function($) {
         return hash;
     };
 
+    var isJobPage = function(path) {
+        return path.match(/^\/job\/.*?\//) !== null;
+    }
+
     var doonyTitleLink = $("#top-panel a").first();
     var domain = getSubdomain(window.location.hostname);
-    console.log(hashCode(domain));
-    var color = colors[Math.abs(hashCode(domain)) % colors.length - 1];
     doonyTitleLink.html("<div id='doony-title'>" + domain + "</div>");
 
-    console.log(color);
+    var color = colors[Math.abs(hashCode(domain)) % colors.length];
     $("#top-panel").css('background-color', color);
 
+    // Remove icons from the left hand menu and strip nbsp's
     $(".task").each(function() {
         $("a img", $(this)).remove();
         $(this).html(function(idx, oldHtml) {
@@ -47,4 +50,9 @@ jQuery(function($) {
             return replaced;
         });
     });
+
+    if (isJobPage(window.location.pathname)) {
+        $("#main-panel h1").first().css('display', 'inline-block');
+        $("#main-panel h1").after("<button class='btn btn-primary doony-build'>Build Now</button>");
+    }
 });
