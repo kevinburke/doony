@@ -60,7 +60,7 @@ You can also run this as a Chrome extension.
 2. Edit the `matches` value of the `manifest.json` file to contain the server
 names of your Jenkins servers (see [Match Patterns][patterns]).
 
-3. Open [[chrome://extensions]] and click "Load unpacked extension".
+3. Open [chrome://extensions][] and click "Load unpacked extension".
 
 4. Navigate to this repo and click "Open"
 
