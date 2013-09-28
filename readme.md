@@ -23,6 +23,7 @@ Doony is custom CSS and yavascript for jenkins
 - Hover menus have a pointer cursor, indicating clickability
 - Text inputs are friendlier, bigger
 - Builds are zebra-striped, have more padding
+- Homepage has an option for "view console output of latest test"
 
 ## Installation
 
@@ -49,6 +50,10 @@ Doony is custom CSS and yavascript for jenkins
 [simple]: https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin
 
 4. Click "Save". Enjoy!
+
+## Known Issues
+
+This doesn't work well with multi-job configuration.
 
 ## Compatibility
 
