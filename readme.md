@@ -60,6 +60,9 @@ You can also run this as a Chrome extension.
 2. Edit the `matches` value of the `manifest.json` file to contain the server
 names of your Jenkins servers (see [Match Patterns][patterns]).
 
+2. Run `git update-index --skip-worktree manifest.json` so you don't
+   accidentally commit your `manifest.json` change.
+
 3. Open [chrome://extensions](chrome://extensions) and click "Load unpacked extension".
 
 4. Navigate to this repo and click "Open"
