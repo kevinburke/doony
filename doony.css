@@ -693,3 +693,8 @@ a.yuimenulabel, a.yuimenuitemlabel,
     display: block;
 }
 
+/* For us this is the "Jobs List" plugin. This probably doesn't work well for
+ * all use cases. */
+.yui-skin-sam #dashboard_portlet_1 tr:nth-child(n+4) td {
+    padding: 15px 3px;
+}
