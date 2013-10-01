@@ -18,13 +18,14 @@ here.
 
 <img src="https://api.monosnap.com/image/download?id=8oNxdjkr9tcGIrnZs8KsJk3RE" />
 
-<img src="https://api.monosnap.com/image/download?id=eH9vV2jF4UbsgLHm35ptE2k2E" />
+<img src="https://api.monosnap.com/image/download?id=YDWD8TzKBUhBk8j3MwmsXy7Mn" />
 
 ## Changes
 
 - There's a "Build Now" button on every build page. The button will redirect
   you to the console output of the new build. You can also easily cancel the
   current build.
+- The orbs are gone! Replaced with shiny circles and circular in-progress bars.
 - Click targets in the left hand menu are much bigger (they expand to fill the
   available UI)
 - The fonts are bigger. Way bigger.
@@ -77,11 +78,11 @@ the default Jenkins styles.
     You should not use those URL's for production, however.
 
     Alternatively you can let Jenkins self host these files by putting them in `~/.jenkins/userContent`
-    With the default Jenkins settings the files you use will then be: 
-    
+    With the default Jenkins settings the files you use will then be:
+
         - http://localhost:8080/userContent/doony.css
         - http://localhost:8080/userContent/doony.js
-    
+
     Here's a screenshot of the settings page:
 
     <img src="https://api.monosnap.com/image/download?id=qtiCAUev2R3yS46He5LHwQXUS" />
