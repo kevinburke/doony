@@ -587,9 +587,9 @@ textarea
     text-decoration: underline;
 }
 
-.task a:nth-child(2) {
+.task a:nth-child(n+1) {
     padding: 10px 30px 10px 0;
-    display: block;
+    display: inline-block;
 }
 
 .task a:first-child,
