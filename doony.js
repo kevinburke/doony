@@ -473,6 +473,7 @@ jQuery(function($) {
             // XXX hack, this is for the main page job list
             } else if (this.classList.contains("icon32x32")) {
                 dimension = 24;
+                wrapper.style.marginTop = "4px";
                 wrapper.style.marginLeft = "4px";
             } else {
                 dimension = this.getAttribute('width');
