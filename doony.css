@@ -579,6 +579,14 @@ textarea
     padding-left: 0;
 }
 
+#tasks a {
+    text-decoration: none;
+}
+
+#tasks a:hover {
+    text-decoration: underline;
+}
+
 .task a:nth-child(2) {
     padding: 10px 30px 10px 0;
     display: block;

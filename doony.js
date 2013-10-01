@@ -480,7 +480,6 @@ jQuery(function($) {
     // XXX make the icon really good
     var replaceFloatyBall = function(selector, type) {
         $(selector).each(function() {
-            console.log(selector);
             var a = $(this).parent("a");
             var wrapper = document.createElement('div');
             wrapper.className = 'doony-circle doony-circle-' + type;
