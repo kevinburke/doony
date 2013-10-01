@@ -465,9 +465,9 @@ jQuery(function($) {
             wrapper.className = 'doony-circle doony-circle-' + type;
             wrapper.style.display = 'inline-block';
             var dimension;
-            if (this.getAttribute('width') === "48") {
+            if (this.getAttribute('width') === "48" || this.getAttribute('width') === "24") {
                 // an overly large ball is scary
-                dimension = "30";
+                dimension = this.getAttribute('width') * 0.5 + 8;
                 wrapper.style.marginRight = "15px";
                 wrapper.style.verticalAlign = "middle";
             } else {
@@ -477,12 +477,7 @@ jQuery(function($) {
             $(wrapper).css('height', dimension);
 
             var a = $(this).parent("a");
-            if (a.length) {
-                a.after(wrapper);
-                a.remove();
-            } else {
-                $(this).after(wrapper).remove();
-            }
+            $(this).after(wrapper).remove();
         });
     };
 
