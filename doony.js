@@ -529,6 +529,9 @@ jQuery(function($) {
     if (isJobHomepage(window.location.pathname)) {
         var jobUrl = getJobUrl(window.location.pathname);
         $.getJSON(jobUrl + 'api/json?tree=lastBuild[number]', function(data) {
+            if (!'lastBuild' in data || data.lastBuild === null || !('number' in data.lastBuild)) {
+                return;
+            }
             var message = "View console output for the latest test";
             var href = jobUrl + data.lastBuild.number + '/consoleFull';
             var h2 = $("h2:contains('Permalinks')");
