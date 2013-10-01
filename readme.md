@@ -5,8 +5,16 @@ your Jenkins user experience much better.
 
 ## Who's Using It
 
-Doony is in use at Twilio and Panic, Inc. Ping me to add your company name
-here.
+Doony was made at [Twilio]( https://www.twilio.com ). It's also been forked/starred by
+employees at:
+
+- Panic, Inc
+- the BBC
+- Instagram
+- Netflix
+- eBay
+- Groupon
+- Mail.ru
 
 ### Before
 
