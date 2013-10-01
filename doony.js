@@ -476,7 +476,7 @@ jQuery(function($) {
                 wrapper.style.marginTop = "4px";
                 wrapper.style.marginLeft = "4px";
             } else {
-                dimension = this.getAttribute('width');
+                dimension = this.getAttribute('width') || 12;
             }
             $(wrapper).css('width', dimension);
             $(wrapper).css('height', dimension);
