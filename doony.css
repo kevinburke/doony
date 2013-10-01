@@ -718,6 +718,12 @@ a.yuimenulabel, a.yuimenuitemlabel,
     background-image: radial-gradient(3px 3px 45deg, circle cover, #72d472 0%, #397439 100%);
 }
 
+.doony-circle-warning {
+    background: #f0ad4e;
+    background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
+    background-image: -webkit-radial-gradient(3px 3px, circle cover, #f0ad4e, #d58512);
+    background-image: radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
+}
 
 /** 
  * XXX For us this is the "Jobs List" plugin. This probably doesn't work well for

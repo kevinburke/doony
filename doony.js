@@ -173,9 +173,15 @@ jQuery(function($) {
         });
     };
 
-    replaceFloatyBall("img[alt='Success > Console Output']", "success");
     replaceFloatyBall("img[alt='Aborted > Console Output']", "aborted");
+    replaceFloatyBall("img[alt='Pending > Console Output']", "aborted");
+    replaceFloatyBall("img[alt='Not built > Console Output']", "aborted");
+
+    replaceFloatyBall("img[alt='In progress > Console Output']", "success");
+    replaceFloatyBall("img[alt='Success > Console Output']", "success");
+
     replaceFloatyBall("img[alt='Failed > Console Output']", "failure");
+    replaceFloatyBall("img[alt='Unstable > Console Output']", "warning");
 
     if (isJobHomepage(window.location.pathname)) {
         var jobUrl = getJobUrl(window.location.pathname);
