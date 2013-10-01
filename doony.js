@@ -298,25 +298,6 @@ window.ProgressCircle = ProgressCircle;
 
 jQuery(function($) {
 
-    //var myCanvas = document.getElementById('my_canvas');
-
-    //var circle = new ProgressCircle({
-        //canvas: myCanvas,
-        //minRadius: 5,
-        //arcWidth: 2
-    //});
-
-    //var x = 0;
-    //circle.addEntry({
-        //fillColor: 'rgba(0, 255, 0, 0.5)',
-        //progressListener: function() {
-            //if (x >= 1) { x = 0; }
-            //x = x + 0.01;
-            //return x; // between 0 and 1
-        //},
-    //});
-    //circle.start(100);
-
     var colors = [
         '#C02942', // a red
         '#4ecdc4', // a bright green blue
@@ -480,13 +461,28 @@ jQuery(function($) {
     // XXX make the icon really good
     var replaceFloatyBall = function(selector, type) {
         $(selector).each(function() {
-            var a = $(this).parent("a");
             var wrapper = document.createElement('div');
             wrapper.className = 'doony-circle doony-circle-' + type;
             wrapper.style.display = 'inline-block';
+            var dimension;
+            if (this.getAttribute('width') === "48") {
+                // an overly large ball is scary
+                dimension = "30";
+                wrapper.style.marginRight = "15px";
+                wrapper.style.verticalAlign = "middle";
+            } else {
+                dimension = this.getAttribute('width');
+            }
+            $(wrapper).css('width', dimension);
+            $(wrapper).css('height', dimension);
 
-            a.after(wrapper);
-            a.remove();
+            var a = $(this).parent("a");
+            if (a.length) {
+                a.after(wrapper);
+                a.remove();
+            } else {
+                $(this).after(wrapper).remove();
+            }
         });
     };
 
@@ -531,7 +527,6 @@ jQuery(function($) {
     setInterval(function() {
         replaceFloatyBall("img[src*='grey.png']", "aborted");
         replaceFloatyBall("img[src*='blue.png']", "success");
-
         replaceFloatyBall("img[src*='red.png']", "failure");
         replaceFloatyBall("img[src*='yellow.png']", "warning");
     }, 10);
