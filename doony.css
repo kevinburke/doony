@@ -693,8 +693,36 @@ a.yuimenulabel, a.yuimenuitemlabel,
     display: block;
 }
 
-/* For us this is the "Jobs List" plugin. This probably doesn't work well for
- * all use cases. */
+.doony-circle {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+}
+
+.doony-circle-aborted {
+    background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
+    background-image: -webkit-radial-gradient(3px 3px, circle cover, #ccc, #999);
+    background-image: radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
+}
+
+.doony-circle-failure {
+    background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #d9534f 0%, #ac2925 100%);
+    background-image: -webkit-radial-gradient(3px 3px, circle cover, #d9534f, #ac2925);
+    background-image: radial-gradient(3px 3px 45deg, circle cover, #d9534f 0%, #ac2925 100%);
+}
+
+.doony-circle-success {
+    background: #397439;
+    background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #72d472 0%, #397439 100%);
+    background-image: -webkit-radial-gradient(3px 3px, circle cover, #72d472, #397439);
+    background-image: radial-gradient(3px 3px 45deg, circle cover, #72d472 0%, #397439 100%);
+}
+
+
+/** 
+ * XXX For us this is the "Jobs List" plugin. This probably doesn't work well for
+ * all use cases.
+ */
 .yui-skin-sam #dashboard_portlet_1 tr:nth-child(n+4) td {
     padding: 15px 3px;
 }

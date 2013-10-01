@@ -159,6 +159,24 @@ jQuery(function($) {
         }, 50);
     }
 
+    // Replace the floaty ball with a better icon
+    // XXX make the icon really good
+    var replaceFloatyBall = function(selector, type) {
+        $(selector).each(function() {
+            var a = $(this).parent("a");
+            var wrapper = document.createElement('div');
+            wrapper.className = 'doony-circle doony-circle-' + type;
+            wrapper.style.display = 'inline-block';
+
+            a.after(wrapper);
+            a.remove();
+        });
+    };
+
+    replaceFloatyBall("img[alt='Success > Console Output']", "success");
+    replaceFloatyBall("img[alt='Aborted > Console Output']", "aborted");
+    replaceFloatyBall("img[alt='Failed > Console Output']", "failure");
+
     if (isJobHomepage(window.location.pathname)) {
         var jobUrl = getJobUrl(window.location.pathname);
         $.getJSON(jobUrl + 'api/json?tree=lastBuild[number]', function(data) {
