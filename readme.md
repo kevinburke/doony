@@ -25,6 +25,8 @@ here.
 - There's a "Build Now" button on every build page. The button will redirect
   you to the console output of the new build. You can also easily cancel the
   current build.
+- Click targets in the left hand menu are much bigger (they expand to fill the
+  available UI)
 - The fonts are bigger. Way bigger.
 - "Jenkins" logo replaced with a custom color and the domain of your build server
 - More spacing in between list items.
@@ -98,3 +100,12 @@ should make skinning Jenkins much less brittle. Hopefully it will get merged
 into the mainline soon, then I can update this library.
 
 [jenkins-pull]: https://github.com/jenkinsci/jenkins/pull/960
+
+- This project is in no way intended to slam Jenkins developers. Jenkins is
+awesome, and unlike Travis you never get a blank screen. They are working
+within a series of vastly different constraints than I am. Consider:
+
+    - they have to support every browser/platform/language
+    - any change they make will make part of the userbase angry
+    - every change has to be completely open-source friendly in every way
+
