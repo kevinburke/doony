@@ -32,7 +32,8 @@ here.
 - "Jenkins" logo replaced with a custom color and the domain of your build server
 - More spacing in between list items.
 - Removes a lot of the useless icons
-- Replaces Courier New with Consolas
+- "Console Output" looks more like a console.
+- Replaces Courier New with Consolas.
 - Hover menus have a pointer cursor, indicating clickability
 - Text inputs are friendlier, bigger
 - Builds are zebra-striped, have more padding
