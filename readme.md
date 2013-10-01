@@ -16,7 +16,7 @@ here.
 
 <img src="https://api.monosnap.com/image/download?id=aoqX9gzkqqEPa8IbKvEknmdug" />
 
-<img src="https://api.monosnap.com/image/download?id=8oNxdjkr9tcGIrnZs8KsJk3RE" />
+<img src="https://api.monosnap.com/image/download?id=12w3g9i5oU8uEBQSqV8okgwXJ" />
 
 <img src="https://api.monosnap.com/image/download?id=YDWD8TzKBUhBk8j3MwmsXy7Mn" />
 
