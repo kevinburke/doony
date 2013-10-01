@@ -470,13 +470,16 @@ jQuery(function($) {
                 dimension = this.getAttribute('width') * 0.5 + 8;
                 wrapper.style.marginRight = "15px";
                 wrapper.style.verticalAlign = "middle";
+            // XXX hack, this is for the main page job list
+            } else if (this.classList.contains("icon32x32")) {
+                dimension = 24;
+                wrapper.style.marginLeft = "4px";
             } else {
                 dimension = this.getAttribute('width');
             }
             $(wrapper).css('width', dimension);
             $(wrapper).css('height', dimension);
 
-            var a = $(this).parent("a");
             $(this).after(wrapper).remove();
         });
     };
