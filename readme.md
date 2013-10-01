@@ -31,7 +31,29 @@ here.
 - Builds are zebra-striped, have more padding
 - Homepage has an option for "view console output of latest test"
 
-## Installation
+### Chrome Extension
+
+If you don't control your Jenkins environment, you can run this as a Chrome
+extension.
+
+1. Clone this repo locally.
+
+2. Edit the `matches` value of the `manifest.json` file to contain the server
+names of your Jenkins servers (see [Match Patterns][patterns]).
+
+2. Run `git update-index --skip-worktree manifest.json` so you don't
+   accidentally commit your `manifest.json` change.
+
+3. Open [chrome://extensions](chrome://extensions) and click "Load unpacked extension".
+
+4. Navigate to this repo and click "Open"
+
+[patterns]: http://developer.chrome.com/extensions/match_patterns.html
+
+## Installation in Jenkins
+
+If you do install your Jenkins environment it's probably best to embed it in
+the default Jenkins styles.
 
 1. Install the [JQuery Plugin][jquery]
 
@@ -57,25 +79,18 @@ here.
 
 4. Click "Save". Enjoy!
 
-### Chrome Extension
-
-You can also run this as a Chrome extension.
-
-1. Clone this repo locally.
-
-2. Edit the `matches` value of the `manifest.json` file to contain the server
-names of your Jenkins servers (see [Match Patterns][patterns]).
-
-2. Run `git update-index --skip-worktree manifest.json` so you don't
-   accidentally commit your `manifest.json` change.
-
-3. Open [chrome://extensions](chrome://extensions) and click "Load unpacked extension".
-
-4. Navigate to this repo and click "Open"
-
-[patterns]: http://developer.chrome.com/extensions/match_patterns.html
-
 ## Compatibility
 
 This will "work" against the latest version of Jenkins, currently 1.532. It may
 work with older versions but this is not guaranteed.
+
+## Notes
+
+- This is very much a work in progress, feel free to file bugs/issues and I'll
+make improvements as I can.
+
+- There's [a pull request against the Jenkins project][jenkins-pull] that
+should make skinning Jenkins much less brittle. Hopefully it will get merged
+into the mainline soon, then I can update this library.
+
+[jenkins-pull]: https://github.com/jenkinsci/jenkins/pull/960
