@@ -1,6 +1,12 @@
 # Doony
 
-Doony is custom CSS and yavascript for jenkins
+Doony is a series of UI improvements on top of Jenkins. Install this to make
+your Jenkins user experience much better.
+
+## Who's Using It
+
+Doony is in use at Twilio and Panic, Inc. Ping me to add your company name
+here.
 
 ### Before
 
