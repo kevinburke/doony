@@ -597,6 +597,10 @@ textarea
     padding: 10px 0 10px 10px;
 }
 
+.doony-canvas {
+    margin-bottom: -2px;
+}
+
 #buildHistory .build-row:nth-child(2n) {
     background-color: #f9f9f9;
 }
@@ -723,6 +727,11 @@ a.yuimenulabel, a.yuimenuitemlabel,
     background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
     background-image: -webkit-radial-gradient(3px 3px, circle cover, #f0ad4e, #d58512);
     background-image: radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
+}
+
+/* Remove the bouncy balls */
+#buildHistory img[src*="anime.gif"] {
+    visibility: hidden;
 }
 
 /** 
