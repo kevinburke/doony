@@ -16,6 +16,10 @@ here.
 
 <img src="https://api.monosnap.com/image/download?id=aoqX9gzkqqEPa8IbKvEknmdug" />
 
+<img src="https://api.monosnap.com/image/download?id=8oNxdjkr9tcGIrnZs8KsJk3RE" />
+
+<img src="https://api.monosnap.com/image/download?id=eH9vV2jF4UbsgLHm35ptE2k2E" />
+
 ## Changes
 
 - There's a "Build Now" button on every build page. The button will redirect
