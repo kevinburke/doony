@@ -76,6 +76,12 @@ the default Jenkins styles.
 
     You should not use those URL's for production, however.
 
+    Alternatively you can let Jenkins self host these files by putting them in `~/.jenkins/userContent`
+    With the default Jenkins settings the files you use will then be: 
+    
+        - http://localhost:8080/userContent/doony.css
+        - http://localhost:8080/userContent/doony.js
+    
     Here's a screenshot of the settings page:
 
     <img src="https://api.monosnap.com/image/download?id=qtiCAUev2R3yS46He5LHwQXUS" />
