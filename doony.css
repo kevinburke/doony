@@ -762,3 +762,12 @@ a.yuimenulabel, a.yuimenuitemlabel,
 .yui-skin-sam #dashboard_portlet_1 tr:nth-child(n+4) td {
     padding: 15px 3px;
 }
+
+/* Fix add description */
+#description img {
+    padding-right: 5px;
+}
+
+#description div {
+    margin-top: 10px;
+}
