@@ -579,11 +579,15 @@ textarea
     padding-left: 0;
 }
 
-#tasks a {
+#tasks a,
+#buildHistory a
+{
     text-decoration: none;
 }
 
-#tasks a:hover {
+#tasks a:hover,
+#buildHistory a:hover
+{
     text-decoration: underline;
 }
 
@@ -595,6 +599,11 @@ textarea
 .task a:first-child,
 .task img {
     display: none;
+}
+
+/* make the link target bigger */
+#buildHistory .model-link {
+    padding: 10px 16px 10px 0;
 }
 
 #buildHistory .pane-header {
