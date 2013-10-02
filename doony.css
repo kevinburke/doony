@@ -659,7 +659,7 @@ body > pre a,
 body > pre a:visited,
 #main-panel pre a,
 #main-panel pre a:visited {
-    color: #c7254e;
+    color: #ED4A6A;
 }
 /** style permalinks **/
 #main-panel > ul {
@@ -755,6 +755,15 @@ a.yuimenulabel, a.yuimenuitemlabel,
 .doony-theme {
     color: grey;
     margin-right: 10px;
+}
+
+.phing-target {
+    font-weight: bold;
+    color: #0ABFBC;
+}
+
+.phing-outcome-finished {
+    color: #C7FCD7;
 }
 
 /* Remove the bouncy balls */
