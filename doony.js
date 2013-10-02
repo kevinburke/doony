@@ -582,4 +582,8 @@ jQuery(function($) {
             title.after(button);
         }
     }
+
+    $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
+        "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
+        "Doony theme</a></span>");
 });

@@ -750,6 +750,11 @@ a.yuimenulabel, a.yuimenuitemlabel,
     background-image: radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
 }
 
+.doony-theme {
+    color: grey;
+    margin-right: 10px;
+}
+
 /* Remove the bouncy balls */
 #buildHistory img[src*="anime.gif"] {
     visibility: hidden;
