@@ -527,6 +527,7 @@ pre, code, .CodeMirror {
 
 input[type="text"], 
 input[type="number"],
+input[type="password"],
 select, 
 textarea,
 .CodeMirror
@@ -539,6 +540,7 @@ textarea,
 
 input[type="text"], 
 input[type="number"],
+input[type="password"],
 select, 
 textarea
 {
