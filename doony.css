@@ -787,3 +787,8 @@ span.phing-outcome-finished {
 #description div {
     margin-top: 10px;
 }
+
+/* Add some margin to the disable project button */
+form #yui-gen1 {
+    margin-top: 10px;
+}
