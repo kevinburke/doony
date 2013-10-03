@@ -3,6 +3,9 @@
 Doony is a series of UI improvements on top of Jenkins. Install this to make
 your Jenkins user experience much better.
 
+Don't have admin access to your Jenkins instance? You can install it as
+a [Chrome extension](#chrome-extension)
+
 ## Who's Using It
 
 Doony was made at [Twilio]( https://www.twilio.com ). It's also been forked/starred by
