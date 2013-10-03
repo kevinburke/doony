@@ -571,20 +571,26 @@ jQuery(function($) {
             // The build post endpoint doesn't tell you the number of the next
             // build, so get it before we create a build.
             $.getJSON(jobUrl + 'api/json?depth=1&tree=nextBuildNumber,lastBuild[building]', function(data) {
-                $.post(jobUrl + 'build', function() {
-                    // in case there's an immediate redirect, don't show the
-                    // bar.
-                    var message = "Build #" + data.nextBuildNumber + " created, you will be redirected when it is ready.";
-                    if (data.lastBuild.building) {
-                        message += " <a href='#' id='doony-clear-build'>Cancel the current build</a>";
-                    }
-                    showButterBar(message);
-                    redirectToNewJobConsole(getJobUrl(window.location.pathname),
-                        data.nextBuildNumber);
-                });
+                $.post(jobUrl + 'build', {'delay': 0})
+                    .done(function() {
+                        // in case there's an immediate redirect, don't show the
+                        // bar.
+                        var message = "Build #" + data.nextBuildNumber + " created, you will be redirected when it is ready.";
+                        if (data.lastBuild.building) {
+                            message += " <a href='#' id='doony-clear-build'>Cancel the current build</a>";
+                        }
+                        showButterBar(message);
+                        redirectToNewJobConsole(getJobUrl(window.location.pathname),
+                            data.nextBuildNumber);
+                    })
+                    .fail(function(jqXHR, textStatus, errorThrown) {
+                        // assume the POST failed because of a parameterized
+                        // build.
+                    });
             });
         });
 
+        // Set the 'clear current build' event
         $(document).on('click', '#doony-clear-build', function(e) {
             e.preventDefault();
             var jobUrl = getRootJobUrl(window.location.pathname);
@@ -593,7 +599,9 @@ jQuery(function($) {
             });
         });
 
+        // Append the "Build Now" button to the dom.
         var title = $("#main-panel h1").first();
+        // This checks if there's a progress bar
         if (title.children("div").length) {
             title.append(button);
         } else {
