@@ -676,6 +676,7 @@ body > pre a:visited,
 #main-panel {
     padding-left: 15px;
 }
+
 a.yuimenulabel, a.yuimenuitemlabel,
 .yui-skin-sam .yuimenuitemlabel
 {
@@ -757,12 +758,12 @@ a.yuimenulabel, a.yuimenuitemlabel,
     margin-right: 10px;
 }
 
-span.phing-target {
+.yui-skin-sam .phing-target {
     font-weight: bold;
     color: #0ABFBC;
 }
 
-span.phing-outcome-finished {
+.yui-skin-sam .phing-outcome-finished {
     color: #C7FCD7;
 }
 
