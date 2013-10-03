@@ -789,6 +789,6 @@ span.phing-outcome-finished {
 }
 
 /* Add some margin to the disable project button */
-form #yui-gen1 {
-    margin-top: 10px;
+#main-panel div[align=right] form[action=disable] {
+    margin-top: 10px;;
 }
