@@ -372,7 +372,7 @@ jQuery(function($) {
     var redirectToNewJobConsole = function(jobUrl, buildNumber) {
         if (isRootHomepage(jobUrl)) {
             $.getJSON(jobUrl + 'api/json?tree=activeConfigurations[name]', function(data) {
-                if (data !== "{}" && 'activeConfigurations' in data) {
+                if (JSON.stringify(data) !== "{}" && 'activeConfigurations' in data) {
                     // If its a multi configuration, just pick the first one.
                     // This works for us, might have to make this configurable
                     // somehow.
@@ -575,7 +575,11 @@ jQuery(function($) {
                     // in case there's an immediate redirect, don't show the
                     // bar.
                     var message = "Build #" + data.nextBuildNumber + " created, you will be redirected when it is ready.";
-                    if (data.lastBuild.building) {
+                    if (JSON.stringify(data) !== "{}" &&
+                        'lastBuild' in data &&
+                        data.lastBuild !== null &&
+                        data.lastBuild.building
+                    ) {
                         message += " <a href='#' id='doony-clear-build'>Cancel the current build</a>";
                     }
                     showButterBar(message);
