@@ -1,6 +1,6 @@
 {
   "name": "doony",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "UI Improvements for Jenkins",
   "main": "doony.js",
   "scripts": {
@@ -17,5 +17,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kevinburke/doony/issues"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0"
   }
 }
