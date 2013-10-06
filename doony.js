@@ -424,7 +424,7 @@ jQuery(function($) {
                 $("#matrix .model-link").each(function(idx, item) {
                     if (item.getAttribute('href') === name) {
                         var href = jobUrl + name + data.lastBuild.number + '/consoleFull';
-                        var message = "View console output for the latest test";
+                        var message = "View console output for the latest build";
                         $(item).next(".doony-callout").children("a").attr('href', href);
                     }
                 });
@@ -445,7 +445,7 @@ jQuery(function($) {
             // Create the div, even though we don't have the HREF yet, so the
             // UI looks consistent
             $("#matrix .model-link").each(function(idx, item) {
-                var message = "View console output for the latest test";
+                var message = "View console output for the latest build";
                 $(item).after(getCallout(message, null));
             });
             $.getJSON(jobUrl + 'api/json?tree=activeConfigurations[name]', function(data) {
@@ -555,7 +555,7 @@ jQuery(function($) {
             if (!'lastBuild' in data || data.lastBuild === null || !('number' in data.lastBuild)) {
                 return;
             }
-            var message = "View console output for the latest test";
+            var message = "View console output for the latest build";
             var href = jobUrl + data.lastBuild.number + '/consoleFull';
             var h2 = $("h2:contains('Permalinks')");
             h2.after(getCallout(message, href));
