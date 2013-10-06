@@ -5,7 +5,8 @@
  * Find the absolute position of an element
  */
 var absPos = function(element) {
-    var offsetLeft = offsetTop = 0;
+    var offsetLeft, offsetTop;
+    offsetLeft = offsetTop = 0;
     if (element.offsetParent) {
         do {
             offsetLeft += element.offsetLeft;
@@ -91,7 +92,7 @@ ProgressCircle.prototype = {
         var self = this;
         this.timer = setInterval(function() {
             self._update();
-        }, interval || 33)
+        }, interval || 33);
 
         return this;
     },
@@ -110,7 +111,7 @@ ProgressCircle.prototype = {
      */
     _update: function() {
         this._clear();
-        this.circles.forEach(function(circle, idx, array) {
+        this.circles.forEach(function(circle) {
             circle.update();
         });
 
@@ -280,7 +281,7 @@ Circle.prototype = {
         var ctx = this.context;
 
         ctx.beginPath();
-        ctx.moveTo(pointList[0][0], pointList[0][1])
+        ctx.moveTo(pointList[0][0], pointList[0][1]);
         for (var i = 1; i < pointList.length; ++i) {
             ctx.lineTo(pointList[i][0], pointList[i][1]);
         }
@@ -318,7 +319,7 @@ jQuery(function($) {
 
     var hashCode = function(string) {
         var hash = 0, i, char;
-        if (string.length == 0) return hash;
+        if (string.length === 0) return hash;
         for (i = 0, l = string.length; i < l; i++) {
             char  = string.charCodeAt(i);
             hash  = ((hash<<5)-hash)+char;
@@ -329,7 +330,7 @@ jQuery(function($) {
 
     var isJobPage = function(path) {
         return path.match(/^\/job\/.*?\//) !== null;
-    }
+    };
 
     /**
      * This is a little tricky because it needs to match either the homepage or
@@ -338,7 +339,7 @@ jQuery(function($) {
      */
     var isJobHomepage = function(path) {
         return path.match(/^\/job\/.*?\/(.*?=.*?\/)?$/) !== null;
-    }
+    };
 
     var isRootHomepage = function(path) {
         return path.match(/^\/job\/.*?\/$/) !== null;
@@ -346,7 +347,7 @@ jQuery(function($) {
 
     var getRootJobUrl = function(path) {
         return path.match(/^\/job\/.*?\//)[0];
-    }
+    };
 
     // note: this function assumes you're already on a job page
     var getJobUrl = function(path) {
@@ -367,7 +368,7 @@ jQuery(function($) {
                 redirectForUrl(jobUrl, buildNumber);
             }, 1000);
         });
-    }
+    };
 
     var redirectToNewJobConsole = function(jobUrl, buildNumber) {
         if (isRootHomepage(jobUrl)) {
@@ -414,8 +415,8 @@ jQuery(function($) {
     var getCallout = function(message, href) {
         return "<div class='doony-callout doony-callout-info'><a " +
             (href === null ? "" : "href='" + href + "'") + ">" + message +
-            "</a></div>"
-    }
+            "</a></div>";
+    };
 
     // xxx combine this with the getCallout below
     var updateConfiguration = function(jobUrl, name) {
@@ -424,7 +425,6 @@ jQuery(function($) {
                 $("#matrix .model-link").each(function(idx, item) {
                     if (item.getAttribute('href') === name) {
                         var href = jobUrl + name + data.lastBuild.number + '/consoleFull';
-                        var message = "View console output for the latest build";
                         $(item).next(".doony-callout").children("a").attr('href', href);
                     }
                 });
@@ -497,7 +497,7 @@ jQuery(function($) {
             // 48 -> dimension 32.
             // radius should be 12, plus 4 width
             // 16 -> dimension 16, radius 4
-            var dimension, radius, arcWidth;
+            var dimension;
             if (this.getAttribute('width') === "48" || this.getAttribute('width') === "24") {
                 // an overly large ball is scary
                 dimension = this.getAttribute('width') * 0.5 + 8;
@@ -552,7 +552,7 @@ jQuery(function($) {
     if (isJobHomepage(window.location.pathname)) {
         var jobUrl = getJobUrl(window.location.pathname);
         $.getJSON(jobUrl + 'api/json?tree=lastBuild[number]', function(data) {
-            if (!'lastBuild' in data || data.lastBuild === null || !('number' in data.lastBuild)) {
+            if (!('lastBuild' in data) || data.lastBuild === null || !('number' in data.lastBuild)) {
                 return;
             }
             var message = "View console output for the latest build";
