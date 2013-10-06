@@ -1,4 +1,4 @@
-body.yui-skin-sam, 
+body.yui-skin-sam,
 .yui-skin-sam table,
 .yui-skin-sam form,
 .yui-skin-sam input,
@@ -6,7 +6,7 @@ body.yui-skin-sam,
 .yui-skin-sam th,
 .yui-skin-sam p,
 .yui-skin-sam textarea,
-.yui-skin-sam select 
+.yui-skin-sam select
 {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -525,10 +525,10 @@ pre, code, .CodeMirror {
     border: none !important;
 }
 
-input[type="text"], 
+input[type="text"],
 input[type="number"],
 input[type="password"],
-select, 
+select,
 textarea,
 .CodeMirror
 {
@@ -538,10 +538,10 @@ textarea,
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-input[type="text"], 
+input[type="text"],
 input[type="number"],
 input[type="password"],
-select, 
+select,
 textarea
 {
     padding: 6px 12px;
@@ -636,7 +636,7 @@ textarea
     top: 50%;
 }
 
-/* 
+/*
  * The console output doesn't have an ID on it, sadly, so style its place in
  * the DOM and hope nothing else is affected
  *
@@ -668,7 +668,7 @@ body > pre a:visited,
 }
 
 #main-panel > ul .model-link,
-#main-panel > ul li 
+#main-panel > ul li
 {
     padding-bottom: 7px;
 }
@@ -772,7 +772,7 @@ a.yuimenulabel, a.yuimenuitemlabel,
     visibility: hidden;
 }
 
-/** 
+/**
  * XXX For us this is the "Jobs List" plugin. This probably doesn't work well for
  * all use cases.
  */
@@ -786,5 +786,10 @@ a.yuimenulabel, a.yuimenuitemlabel,
 }
 
 #description div {
+    margin-top: 10px;
+}
+
+/* Add some margin to the disable project button */
+#main-panel div[align=right] form[action=disable] {
     margin-top: 10px;
 }
