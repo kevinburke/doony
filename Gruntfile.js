@@ -10,38 +10,43 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            options: {
+                separator: ';',
+            },
+            dist: {
+                src: ['ProgressCircle.js', 'doony-src.js'],
+                dest: 'doony.js',
+            },
+        },
+
         uglify: {
             options: {
                 mangle: {
-                    except: ['jQuery']
+                    except: ['ProgressCircle']
                 },
-                banner: '/* Hulk v0.1 | (c) 2013 Kevin Burke | License: MIT */\n',
+                report: 'gzip',
+                banner: '/* Doony v0.1 | (c) 2013 Kevin Burke | License: MIT */\n',
                 compress: true
             },
             my_target: {
                 files: {
-                    'hulk.min.js': ['hulk.js']
+                    'doony.min.js': ['doony.js']
                 }
             }
-        },
-
-        qunit: {
-            files: ['tests/test.html']
         },
 
         sass: {
             dist: {
                 files: {
-                    'css/hulk-all.css': 'scss/hulk-all.scss',
-                    'css/hulk.css': 'scss/hulk.scss',
-                    'css/hulk-colors.css': 'scss/hulk-colors.scss',
+                    'doony.css': 'doony.scss',
                 }
             }
         },
 
         watch: {
             scripts: {
-                files: 'hulk.js',
+                files: 'doony.js',
                 tasks: ['jshint', 'uglify']
             },
             css: {
@@ -54,7 +59,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    //grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
 
