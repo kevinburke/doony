@@ -633,7 +633,9 @@ textarea
 }
 
 .healthReport img {
-    top: 50%;
+    vertical-align: top;
+    padding-top: 1px;
+    display: inline-block;
 }
 
 /* 
