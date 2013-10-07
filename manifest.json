@@ -12,7 +12,7 @@
         "https://jenkins.ci.cloudbees.com/*"
       ],
       "css": ["doony.css"],
-      "js": ["jquery-2.0.3.js", "doony.js"]
+      "js": ["src/vendor/jquery-2.0.3.js", "doony.js"]
     }
    ]
 }
