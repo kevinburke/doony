@@ -3,7 +3,8 @@ venv:
 
 install: venv
 	. venv/bin/activate; pip install flask
-	@echo "\n\nDone. To install in Jenkins, follow the 'Installation' instructions in README.md"
+	npm install .
+	@echo "\033[95m\n\nDone. To install in Jenkins, follow the 'Installation' instructions in README.md\033[0m"
 
 serve:
 	. venv/bin/activate; python run.py
