@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    'doony.css': 'doony.scss',
+                    'doony.css': 'src/doony.scss',
                 }
             }
         },
