@@ -40,8 +40,11 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'doony.css': 'src/doony.scss',
+                },
+                options: {
+                    style: 'compact'
                 }
-            }
+            },
         },
 
         watch: {
