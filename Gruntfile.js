@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         jshint: {
-            all: ['Gruntfile.js', 'doony.js'],
+            all: ['Gruntfile.js', 'src/ProgressCircle.js', 'src/theme.js'],
             options: {
                 "forin": true,
                 "latedef": true,
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 separator: ';',
             },
             dist: {
-                src: ['ProgressCircle.js', 'doony-src.js'],
+                src: ['src/ProgressCircle.js', 'src/theme.js'],
                 dest: 'doony.js',
             },
         },
@@ -46,8 +46,8 @@ module.exports = function(grunt) {
 
         watch: {
             scripts: {
-                files: 'doony.js',
-                tasks: ['jshint', 'uglify']
+                files: 'src/theme.js',
+                tasks: ['jshint', 'concat', 'uglify']
             },
             css: {
                 files: '**/*.scss',
