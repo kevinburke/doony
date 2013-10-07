@@ -1,6 +1,7 @@
 /*
  * ProgressCircle.js
  * http://qiao.github.io/ProgressCircle.js/
+ *
  * © 2011-2013 Xueqiao Xu <xueqiaoxu@gmail.com>
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +34,7 @@
             do {
                 offsetLeft += element.offsetLeft;
                 offsetTop += element.offsetTop;
-            } while (element = element.offsetParent);
+            } while ((element = element.offsetParent) !== null);
         }
         return [offsetLeft, offsetTop];
     };
