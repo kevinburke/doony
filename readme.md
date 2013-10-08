@@ -6,6 +6,10 @@ your Jenkins user experience much better.
 Don't have admin access to your Jenkins instance? You can install it as
 a [Chrome extension](#chrome-extension)
 
+## Live Demo
+
+[See what Doony looks like](http://jenkins.doony.org) on a vanilla Jenkins install
+
 ## Who's Using It
 
 Doony was made at [Twilio]( https://www.twilio.com ). It's also been forked/starred by
