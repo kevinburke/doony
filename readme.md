@@ -1,12 +1,12 @@
 # Doony
 
+<img src="http://doony.org/logosmall.png" alt="Doony logo" />
+
 Doony is a series of UI improvements on top of Jenkins. Install this to make
 your Jenkins user experience much better.
 
 Don't have admin access to your Jenkins instance? You can install it as
 a [Chrome extension](#chrome-extension)
-
-<img src="http://doony.org/logosmall.png" alt="Doony logo" />
 
 ## Live Demo
 
