@@ -6,7 +6,7 @@ your Jenkins user experience much better.
 Don't have admin access to your Jenkins instance? You can install it as
 a [Chrome extension](#chrome-extension)
 
-<img src="http://doony.org/logo.png" alt="Doony logo" width="256" height="256"/>
+<img src="http://doony.org/logosmall.png" alt="Doony logo" />
 
 ## Live Demo
 
