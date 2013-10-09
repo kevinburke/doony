@@ -88,12 +88,10 @@ the default Jenkins styles.
    the CSS and Javascript URL's for this theme. You should find a place to host
    these, on a static server inside your cluster.
 
-    In development, you can use these URL's:
+    You can use these URL's:
 
-        - https://rawgithub.com/kevinburke/doony/master/doony.js
-        - https://rawgithub.com/kevinburke/doony/master/doony.css
-
-    However, [don't use those URL's for production](http://rawgithub.com/#can-i-use-rawgithub-in-production).
+        - https://cdnjs.cloudflare.com/ajax/libs/doony/1.1/js/doony.min.js
+        - https://cdnjs.cloudflare.com/ajax/libs/doony/1.1/css/doony.min.css
 
     Alternatively you can let Jenkins self host these files by putting them in `~/.jenkins/userContent`
     With the default Jenkins settings the files you use will then be:
