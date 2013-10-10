@@ -730,29 +730,31 @@ a.yuimenulabel, a.yuimenuitemlabel,
 }
 
 .doony-circle-aborted {
+    background: #999;
     background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
     background-image: -webkit-radial-gradient(3px 3px, circle cover, #ccc, #999);
-    background-image: radial-gradient(3px 3px 45deg, circle cover, #ccc 0%, #999 100%);
+    background-image: radial-gradient(circle at 3px 3px, #ccc 0%, #999 100%);
 }
 
 .doony-circle-failure {
+    background: #ac2925;
     background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #d9534f 0%, #ac2925 100%);
     background-image: -webkit-radial-gradient(3px 3px, circle cover, #d9534f, #ac2925);
-    background-image: radial-gradient(3px 3px 45deg, circle cover, #d9534f 0%, #ac2925 100%);
+    background-image: radial-gradient(circle at 3px 3px, #d9534f 0%, #ac2925 100%);
 }
 
 .doony-circle-success {
     background: #397439;
     background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #72d472 0%, #397439 100%);
     background-image: -webkit-radial-gradient(3px 3px, circle cover, #72d472, #397439);
-    background-image: radial-gradient(3px 3px 45deg, circle cover, #72d472 0%, #397439 100%);
+    background-image: radial-gradient(circle at 3px 3px, #72d472 0%, #397439 100%);
 }
 
 .doony-circle-warning {
     background: #f0ad4e;
     background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
     background-image: -webkit-radial-gradient(3px 3px, circle cover, #f0ad4e, #d58512);
-    background-image: radial-gradient(3px 3px 45deg, circle cover, #f0ad4e 0%, #d58512 100%);
+    background-image: radial-gradient(circle at 3px 3px, #f0ad4e 0%, #d58512 100%);
 }
 
 .doony-theme {
