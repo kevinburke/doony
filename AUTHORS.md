@@ -10,5 +10,6 @@ Authors
 - Mike Bell <hello@mikebell.io>
 - Paul Lowndes <paul@gtcode.com>
 - Peter Wallin <pwallin@gmail.com>
+- Rushi Vishavadia <rushi.v@gmail.com>
 - danhawkes <dan@danhawkes.co.uk>
 - digital006 <michael.digital.bell@googlemail.com>

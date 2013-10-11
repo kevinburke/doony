@@ -853,6 +853,6 @@ a.yuimenulabel, a.yuimenuitemlabel,
 /* Configuration/Settings page styles */
 .setting-input {
   box-sizing: border-box;
-  -webkit-box-sizing:border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
