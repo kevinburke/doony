@@ -849,3 +849,10 @@ a.yuimenulabel, a.yuimenuitemlabel,
 #main-panel div[align=right] form[action=disable] {
   margin-top: 10px;
 }
+
+/* Configuration/Settings page styles */
+.setting-input {
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
