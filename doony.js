@@ -331,6 +331,11 @@
         '#8fbe00', // lime yellow
     ];
 
+    var Alert = {
+        ERROR : "alert-danger",
+        WARNING: "alert-warning"
+    };
+
     var getSubdomain = function(domain) {
         var parts = domain.split(".");
         if (parts.length <= 2) {
@@ -411,9 +416,9 @@
         }
     };
 
-    var showButterBar = function(message) {
+    var showButterBar = function(message, alert) {
         var div = document.createElement('div');
-        div.className = 'alert alert-warning doony-alert';
+        div.className = 'alert doony-alert ' + alert;
         div.innerHTML = message;
         $("#main-panel").prepend(div);
     };
@@ -605,9 +610,11 @@
                     ) {
                         message += " <a href='#' id='doony-clear-build'>Cancel the current build</a>";
                     }
-                    showButterBar(message);
+                    showButterBar(message, Alert.WARNING);
                     redirectToNewJobConsole(getJobUrl(window.location.pathname),
                         data.nextBuildNumber);
+                }).fail(function() {
+                    showButterBar("Cannot create build. Maybe you need to log in or have the 'build' permission.", Alert.ERROR);
                 });
             });
         });
