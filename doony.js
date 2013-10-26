@@ -613,8 +613,12 @@
                     showButterBar(message, Alert.WARNING);
                     redirectToNewJobConsole(getJobUrl(window.location.pathname),
                         data.nextBuildNumber);
-                }).fail(function() {
-                    showButterBar("Cannot create build. Maybe you need to log in or have the 'build' permission.", Alert.ERROR);
+                }).fail(function(jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 403) {
+                        showButterBar("Cannot create build. Maybe you need to log in or have the 'build' permission.", Alert.ERROR);
+                    } else {
+                        showButterBar("An error occured. Please try again.", Alert.ERROR);
+                    }
                 });
             });
         });
