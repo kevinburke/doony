@@ -612,10 +612,6 @@ textarea {
   border-bottom: 1px solid #ccc;
 }
 
-.yui-skin-sam #top-panel img {
-  display: none;
-}
-
 .yui-skin-sam #search-box {
   font-size: 12px;
   padding: 5px 10px;
@@ -749,6 +745,10 @@ a.yuimenulabel, a.yuimenuitemlabel,
 #doony-title {
   color: #fff;
   margin: 5px 10px;
+}
+
+#doony-logo {
+  height: 33px;
 }
 
 #jenkins-home-link {
