@@ -641,7 +641,7 @@ textarea {
 }
 
 .task a:nth-child(n+1) {
-  padding: 10px 30px 5px 0;
+  padding: 8px 26px 8px 0;
   display: inline-block;
 }
 
@@ -652,7 +652,11 @@ textarea {
 
 /* make the link target bigger */
 #buildHistory .model-link {
-  padding: 10px 13px 10px 0;
+  padding: 0px 0px 0px 0;
+}
+
+#buildHistory .pane.stripped {
+  table-layout: fixed;
 }
 
 #buildHistory .pane-header {
@@ -660,7 +664,7 @@ textarea {
 }
 
 #buildHistory .build-row td:not(.pane-header) {
-  padding: 10px 0 10px 10px;
+  padding: 5px 0 5px 5px;
 }
 
 .doony-canvas {
