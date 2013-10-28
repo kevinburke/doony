@@ -699,11 +699,15 @@ textarea {
 body > pre,
 #main-panel > pre,
 .console-output {
-  font-size: 14px;
-  background-color: #111;
-  color: #eee;
+  font-size: 12px;
+  background-color: #252525;
+  color: #C2E1FA;
   padding: 10px 10px 30px;
   border-radius: 3px;
+  /*box-shadow*/
+  box-shadow: 0 1px 10px rgba(0, 0, 255, 0.40);
+  /*background-clip*/
+  background-clip: padding-box;
 }
 
 /**
