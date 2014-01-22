@@ -1,3 +1,6 @@
+clean:
+	rm -rf venv node_modules
+
 venv:
 	virtualenv venv
 
@@ -14,7 +17,7 @@ authors:
 	git log --raw | grep "^Author: " | sort | uniq | cut -d ' ' -f2- | sed 's/^/- /' >> AUTHORS.md
 
 watch:
-	grunt watch
+	$(PWD)/node_modules/grunt-cli/bin/grunt watch
 
 sass:
 	scss --style expanded src/doony.scss > doony.css
