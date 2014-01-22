@@ -12,7 +12,7 @@ body.yui-skin-sam,
   color: #333;
 }
 
-/*
+/*!
  * Copyright 2013 Twitter, Inc
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -574,7 +574,8 @@ input[type="button"].btn-block {
 }
 
 /****************     end bootstrap styles        ********************/
-pre, code, .CodeMirror {
+/****************     begin doony styles        ********************/
+.console-output {
   font-family: Consolas, Monaco, monospace;
 }
 
@@ -606,13 +607,12 @@ textarea {
   background-image: none !important;
 }
 
-/********************   top panel styles      ***********************/
+/********************   top panel (colored bar) styles  ***********************/
 .yui-skin-sam #top-panel {
   background-url: none;
   background-image: none;
   border-bottom: 1px solid #ccc;
 }
-
 .yui-skin-sam #top-panel img {
   display: none;
 }
@@ -640,13 +640,12 @@ textarea {
 #buildHistory a {
   text-decoration: none;
 }
-
 #tasks a:hover,
 #buildHistory a:hover {
   text-decoration: underline;
 }
 
-.task a:nth-child(n+1) {
+.task-link {
   padding: 10px 30px 10px 0;
   display: inline-block;
 }
@@ -660,29 +659,28 @@ textarea {
 #buildHistory .model-link {
   padding: 10px 16px 10px 0;
 }
-
 #buildHistory .pane-header {
   font-size: 16px;
 }
-
 #buildHistory .build-row td:not(.pane-header) {
   padding: 10px 0 10px 10px;
+}
+#buildHistory .build-row:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+#buildHistory .build-row {
+  border-top: 1px solid #ddd;
+}
+#buildHistory .build-row:last-child {
+  display: none;
+}
+#buildHistory img[src*="anime.gif"] {
+  /* Remove the bouncy balls */
+  visibility: hidden;
 }
 
 .doony-canvas {
   margin-bottom: -2px;
-}
-
-#buildHistory .build-row:nth-child(2n) {
-  background-color: #f9f9f9;
-}
-
-#buildHistory .build-row {
-  border-top: 1px solid #ddd;
-}
-
-#buildHistory .build-row:last-child {
-  display: none;
 }
 
 .healthReport img {
@@ -821,11 +819,6 @@ a.yuimenulabel, a.yuimenuitemlabel,
 
 .yui-skin-sam .phing-outcome-finished {
   color: #C7FCD7;
-}
-
-/* Remove the bouncy balls */
-#buildHistory img[src*="anime.gif"] {
-  visibility: hidden;
 }
 
 /**

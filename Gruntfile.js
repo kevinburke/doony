@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     'doony.css': 'src/doony.scss',
                 },
                 options: {
-                    style: 'compressed'
+                    style: 'expanded'
                 }
             },
         },

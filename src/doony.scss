@@ -516,11 +516,14 @@ input[type="button"].btn-block {
 }
 
 /****************     end bootstrap styles        ********************/
+/****************     begin doony styles        ********************/
 
-pre, code, .CodeMirror {
+// Will work once https://github.com/jenkinsci/jenkins/pull/1099 is merged.
+.console-output {
     font-family: Consolas, Monaco, monospace;
 }
 
+// Overrides the default (ugly) border on CodeMirror textareas.
 .cm-s-default {
     border: none !important;
 }
@@ -547,21 +550,24 @@ textarea
     padding: 6px 12px;
 }
 
+// Remove the Jenkins butler from the background. Replace this with your
+// company's logo if you like
 #main-table {
     background-image: none !important;
 }
 
-/********************   top panel styles      ***********************/
+/********************   top panel (colored bar) styles  ***********************/
 .yui-skin-sam #top-panel {
     background-url: none;
     background-image: none;
     border-bottom: 1px solid #ccc;
+
+    img {
+        display: none;
+    }
 }
 
-.yui-skin-sam #top-panel img {
-    display: none;
-}
-
+// Make the search box target bigger, remove the ugly spyglass
 .yui-skin-sam #search-box {
     font-size: 16px;
     padding: 5px 10px;
@@ -581,19 +587,19 @@ textarea
     padding-left: 0;
 }
 
+// Reverse hover states
 #tasks a,
 #buildHistory a
 {
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-#tasks a:hover,
-#buildHistory a:hover
-{
-    text-decoration: underline;
-}
-
-.task a:nth-child(n+1) {
+// This will work once https://github.com/jenkinsci/jenkins/pull/1100 is merged
+.task-link {
     padding: 10px 30px 10px 0;
     display: inline-block;
 }
@@ -604,32 +610,39 @@ textarea
 }
 
 /* make the link target bigger */
-#buildHistory .model-link {
-    padding: 10px 16px 10px 0;
-}
+#buildHistory {
+    .model-link {
+        padding: 10px 16px 10px 0;
+    }
 
-#buildHistory .pane-header {
-    font-size: 16px;
-}
+    .pane-header {
+        font-size: 16px;
+    }
 
-#buildHistory .build-row td:not(.pane-header) {
-    padding: 10px 0 10px 10px;
+    .build-row td:not(.pane-header) {
+        padding: 10px 0 10px 10px;
+    }
+
+    .build-row:nth-child(2n) {
+        background-color: #f9f9f9;
+    }
+
+    .build-row {
+        border-top: 1px solid #ddd;
+    }
+
+    .build-row:last-child {
+        display: none;
+    }
+
+    img[src*="anime.gif"] {
+        /* Remove the bouncy balls */
+        visibility: hidden;
+    }
 }
 
 .doony-canvas {
     margin-bottom: -2px;
-}
-
-#buildHistory .build-row:nth-child(2n) {
-    background-color: #f9f9f9;
-}
-
-#buildHistory .build-row {
-    border-top: 1px solid #ddd;
-}
-
-#buildHistory .build-row:last-child {
-    display: none;
 }
 
 .healthReport img {
@@ -769,11 +782,6 @@ a.yuimenulabel, a.yuimenuitemlabel,
 
 .yui-skin-sam .phing-outcome-finished {
     color: #C7FCD7;
-}
-
-/* Remove the bouncy balls */
-#buildHistory img[src*="anime.gif"] {
-    visibility: hidden;
 }
 
 /**
