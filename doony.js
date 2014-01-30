@@ -356,7 +356,7 @@
         return hash;
     };
 
-    var getButtonInfo = function(path) {
+    var getButtonInfo = function() {
       var links = Array.prototype.slice.call(document.querySelectorAll('a.task-link'));
       var out = {};
       var idx = -1
@@ -372,6 +372,31 @@
       };
 
       return out;
+    };
+
+    var createBuildButton = function() {
+        var buttonInfo = getButtonInfo();
+        var button;
+
+        if (buttonInfo.innerHTML) {
+          button = document.createElement('button');
+
+          button.className = "btn btn-primary doony-build";
+          button.innerHTML = buttonInfo.innerHTML;
+
+          button.onclick = function() {
+              if (buttonInfo.hasParams) {
+                  window.location.href = buttonInfo.href;
+                  return false;
+              }
+
+              new Ajax.Request(buttonInfo.href);
+              hoverNotification('Build scheduled', button, -100);
+              return false;
+          };
+        }
+
+        return button;
     };
 
     var isJobPage = function(path) {
@@ -609,22 +634,7 @@
     }
 
     if (isJobPage(window.location.pathname)) {
-        var buttonInfo = getButtonInfo();
-        var button = document.createElement('button');
-
-        button.className = "btn btn-primary doony-build";
-        button.innerHTML = buttonInfo.innerHTML;
-
-        button.onclick = function() {
-            if (buttonInfo.hasParams) {
-                window.location.href = buttonInfo.href;
-                return false;
-            }
-
-            new Ajax.Request(buttonInfo.href);
-            hoverNotification('Build scheduled', button, -100);
-            return false;
-        };
+        var button = createBuildButton();
 
         $(document).on('click', '#doony-clear-build', function(e) {
             e.preventDefault();
@@ -635,11 +645,12 @@
         });
 
         var title = $("#main-panel h1").first();
+
         if (title.children("div").length) {
-            title.append(button);
+            button && title.append(button);
         } else {
             title.css('display', 'inline-block');
-            title.after(button);
+            button && title.after(button);
         }
     }
 
