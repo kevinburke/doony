@@ -114,12 +114,6 @@ work with older versions but this is not guaranteed.
 - This is very much a work in progress, feel free to file bugs/issues and I'll
 make improvements as I can.
 
-- There's [a pull request against the Jenkins project][jenkins-pull] that
-should make skinning Jenkins much less brittle. Hopefully it will get merged
-into the mainline soon, then I can update this library.
-
-[jenkins-pull]: https://github.com/jenkinsci/jenkins/pull/960
-
 - This project is in no way intended to slam Jenkins developers. Jenkins is
 awesome, and unlike Travis you never get a blank screen. They are working
 within a series of vastly different constraints than I am. Consider:
