@@ -22,3 +22,6 @@ watch:
 sass:
 	scss --style expanded src/doony.scss > doony.css
 	scss --style compressed src/doony.scss > doony.min.css
+
+minify:
+	$(PWD)/node_modules/grunt-cli/bin/grunt uglify
