@@ -15,6 +15,8 @@ VERSION="$1"
 git pull origin master
 
 pushd ../cdnjs/ajax/libs/doony
+    git clean -f
+    git checkout -b "doony-$VERSION" master
     mkdir -p "$VERSION"
     pushd "$VERSION"
         mkdir -p css js
@@ -27,4 +29,11 @@ popd
 cp doony.min.css "../cdnjs/ajax/libs/doony/$VERSION/css"
 cp doony.min.js "../cdnjs/ajax/libs/doony/$VERSION/js"
 
-echo "Done."
+pushd ../cdnjs
+    git add "ajax/libs/doony/$VERSION"
+    git add "ajax/libs/doony/package.json"
+    git commit -m "Added Doony version $VERSION"
+    git push origin "doony-$VERSION"
+popd
+
+echo "Committed and pushed to remote origin."
