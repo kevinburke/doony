@@ -17,7 +17,7 @@ authors:
 	git log --raw | grep "^Author: " | sort | uniq | cut -d ' ' -f2- | sed 's/^/- /' >> AUTHORS.md
 
 watch:
-	$(PWD)/node_modules/grunt-cli/bin/grunt watch
+	$(PWD)/node_modules/grunt-cli/bin/grunt watch && $(PWD)/node_modules/grunt-cli/bin/grunt uglify
 
 sass:
 	scss --style expanded src/doony.scss > doony.css
