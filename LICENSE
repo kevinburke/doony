@@ -1,6 +1,14 @@
-The MIT License (MIT)
+Doony is released under the MIT License (MIT). 
 
-Copyright (c) 2013 Kevin Burke
+Doony uses the ProgressCircle.js library, which is also released under the MIT
+license. License information can be found in the src/ProgressCircle.js file.
+
+Doony also implements button styles from Twitter Bootstrap, which is released
+under the Apache license. See the license information in src/doony.scss.
+
+// begin normal license text
+
+Copyright (c) 2014 Kevin Burke
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -18,3 +26,5 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
