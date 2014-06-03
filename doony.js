@@ -320,7 +320,10 @@
 
 })(window, document);
 
-;jQuery(function($) {
+;// Contains the JS source code for the Doony theme itself. This file is
+// concatenated with other JS files into doony.js, and then minified into
+// doony.min.js
+jQuery(function($) {
 
     var colors = [
         '#C02942', // a red
@@ -420,9 +423,9 @@
         }
     };
 
-    var showButterBar = function(message, alert) {
+    var showButterBar = function(message, alertName) {
         var div = document.createElement('div');
-        div.className = 'alert doony-alert ' + alert;
+        div.className = 'alert doony-alert ' + alertName;
         div.innerHTML = message;
         $("#main-panel").prepend(div);
     };
@@ -619,7 +622,7 @@
                     showButterBar(message, Alert.WARNING);
                     redirectToNewJobConsole(getJobUrl(window.location.pathname),
                         data.nextBuildNumber);
-                }).fail(function(jqXHR, textStatus, errorThrown) {
+                }).fail(function(jqXHR) {
                     if (jqXHR.status === 403) {
                         showButterBar("Cannot create build. Maybe you need to log in or have the 'build' permission.", Alert.ERROR);
                     } else {
