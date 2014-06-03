@@ -337,6 +337,10 @@
     };
 
     var getSubdomain = function(domain) {
+        if (/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/.test(domain)) {
+            // Looks like an IP address, so return as-is.
+            return domain;
+        }
         var parts = domain.split(".");
         if (parts.length <= 2) {
             return parts.join(".");
