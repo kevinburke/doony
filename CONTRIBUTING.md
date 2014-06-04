@@ -2,10 +2,13 @@ Hello! I'm glad you're interested in contributing to Doony.
 
 ## Installing dependencies
 
-In the top level of the project, run `make install`. Doony depends on node.js
-to perform Javascript syntax checking and minification of the source code.
-Doony also depends on Python to provide a server for testing changes locally.
-These files will all be installed in subdirectories of the `doony` project.
+In the top level of the project, run `make install`.
+
+- Doony depends on node.js to perform Javascript syntax checking and minification of the source code.
+- Doony also depends on Python to provide a server for testing changes locally.
+- Doony also depends on the ruby gem `observr` for triggering builds
+
+These installation files will all be installed in subdirectories of the `doony` project.
 
 ## The current build pipeline
 
