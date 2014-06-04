@@ -19,9 +19,6 @@
     "url": "https://github.com/kevinburke/doony/issues"
   },
   "devDependencies": {
-    "grunt-cli": "~0.1.11",
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3",
     "jshint": "*",
     "uglify-js": "*"
   },
