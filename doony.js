@@ -357,21 +357,22 @@
     };
 
     var getButtonInfo = function() {
-      var links = Array.prototype.slice.call(document.querySelectorAll('a.task-link'));
-      var out = {};
-      var idx = -1
-      var end = links.length;
+      var buttonInfo = {};
 
-      while (++idx < end) {
-          if (links[idx].innerText.match(/Build with Parameters|Build Now/i)) {
-              out.innerHTML = links[idx].innerText;
-              out.href = links[idx].href;
-              out.hasParams = links[idx].innerText === 'Build with Parameters';
-              break;
-          }
-      };
+      $("a.task-link").each(function(index) {
+        var link = $(this);
 
-      return out;
+        if (!link.text().match(/Build with Parameters|Build Now/i)) {
+          return true;
+        }
+
+        buttonInfo.innerHTML = link.text();
+        buttonInfo.href = link.attr("href");
+        buttonInfo.hasParams = link.text() === "Build with Parameters";
+        return false;
+      });
+
+      return buttonInfo;
     };
 
     var createBuildButton = function() {
