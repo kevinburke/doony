@@ -20,7 +20,7 @@ authors:
 watch:
 	$(PWD)/node_modules/grunt-cli/bin/grunt watch && $(PWD)/node_modules/grunt-cli/bin/grunt uglify
 
-sass:
+css:
 	scss --style expanded src/doony.scss > doony.css
 	scss --style compressed src/doony.scss > doony.min.css
 
