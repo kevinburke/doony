@@ -12,6 +12,7 @@ install: venv
 serve:
 	. venv/bin/activate; python run.py
 
+# Run this command to update AUTHORS.md with the latest contributors.
 authors:
 	echo "Authors\n=======\n" > AUTHORS.md
 	git log --raw | grep "^Author: " | sort | uniq | cut -d ' ' -f2- | sed 's/^/- /' >> AUTHORS.md
