@@ -31,7 +31,7 @@ jQuery(function($) {
     };
 
     var hashCode = function(string) {
-        var hash = 0, i, char;
+        var hash = 0, i, l, char;
         if (string.length === 0) return hash;
         for (i = 0, l = string.length; i < l; i++) {
             char  = string.charCodeAt(i);
@@ -118,7 +118,7 @@ jQuery(function($) {
     // Remove icons from the left hand menu and strip nbsp's
     $(".task").each(function() {
         $("a img", $(this)).remove();
-        $(this).html(function(idx, oldHtml) {
+        $(this).html(function(_, oldHtml) {
             var replaced = oldHtml.replace(/&nbsp;/g, "", "g");
             return replaced;
         });
@@ -135,7 +135,7 @@ jQuery(function($) {
     var updateConfiguration = function(jobUrl, name) {
         $.getJSON(jobUrl + name + 'api/json?tree=lastBuild[number]', function(data) {
             if (data.lastBuild !== null && 'number' in data.lastBuild) {
-                $("#matrix .model-link").each(function(idx, item) {
+                $("#matrix .model-link").each(function(_, item) {
                     if (item.getAttribute('href') === name) {
                         var href = jobUrl + name + data.lastBuild.number + '/consoleFull';
                         $(item).next(".doony-callout").children("a").attr('href', href);
@@ -157,7 +157,7 @@ jQuery(function($) {
             $("#matrix .model-link").wrap("<div class='doony-downstream-link'>");
             // Create the div, even though we don't have the HREF yet, so the
             // UI looks consistent
-            $("#matrix .model-link").each(function(idx, item) {
+            $("#matrix .model-link").each(function(_, item) {
                 var message = "View console output for the latest build";
                 $(item).after(getCallout(message, null));
             });
