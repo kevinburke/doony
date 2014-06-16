@@ -587,6 +587,8 @@ jQuery(function($) {
         replaceFloatyBall("img[src*='/blue.png']", "success");
         replaceFloatyBall("img[src*='/red.png']", "failure");
         replaceFloatyBall("img[src*='/yellow.png']", "warning");
+        replaceFloatyBall("img[src*='/nobuilt.png']", "notbuilt");
+        replaceFloatyBall("img[src*='/disabled.png']", "disabled");
     }, 10);
 
     if (isJobHomepage(window.location.pathname)) {
