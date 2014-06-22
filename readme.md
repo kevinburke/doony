@@ -86,8 +86,8 @@ the default Jenkins styles.
 
     You can use these URLs:
 
-        - https://cdnjs.cloudflare.com/ajax/libs/doony/1.5/css/doony.min.css
-        - https://cdnjs.cloudflare.com/ajax/libs/doony/1.5/js/doony.min.js
+        - https://cdnjs.cloudflare.com/ajax/libs/doony/1.6/css/doony.min.css
+        - https://cdnjs.cloudflare.com/ajax/libs/doony/1.6/js/doony.min.js
 
     Alternatively you can let Jenkins self host these files by putting them in `~/.jenkins/userContent`
     With the default Jenkins settings the files you use will then be:
