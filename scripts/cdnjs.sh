@@ -37,3 +37,4 @@ pushd ../cdnjs
 popd
 
 echo "Committed and pushed to remote origin."
+open "https://github.com/kevinburke/cdnjs/compare/doony-$VERSION?expand=1"
