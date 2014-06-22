@@ -257,11 +257,12 @@ jQuery(function($) {
         replaceBouncingFloatyBall("img[src*='yellow_anime.gif']", '#f0ad4e');
     }, 10);
     setInterval(function() {
-        replaceFloatyBall("img[src*='/grey.png']", "aborted");
         replaceFloatyBall("img[src*='/aborted.png']", "aborted");
         replaceFloatyBall("img[src*='/blue.png']", "success");
         replaceFloatyBall("img[src*='/red.png']", "failure");
         replaceFloatyBall("img[src*='/yellow.png']", "warning");
+        replaceFloatyBall("img[src*='/grey.png']", "aborted");
+        replaceFloatyBall("img[src*='/nobuilt.png']", "notbuilt");
     }, 10);
 
     if (isJobHomepage(window.location.pathname)) {

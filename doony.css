@@ -809,6 +809,13 @@ a.yuimenulabel, a.yuimenuitemlabel,
   background-image: radial-gradient(circle at 3px 3px, #f0ad4e 0%, #d58512 100%);
 }
 
+.doony-circle-notbuilt {
+  background: #ababab;
+  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ababab 0%, #787878 100%);
+  background-image: -webkit-radial-gradient(3px 3px, circle cover, #ababab, #787878);
+  background-image: radial-gradient(circle at 3px 3px, #ababab 0%, #787878 100%);
+}
+
 .doony-theme {
   color: grey;
   margin-right: 10px;
