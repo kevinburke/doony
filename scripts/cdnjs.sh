@@ -16,6 +16,10 @@ git pull origin master
 
 pushd ../cdnjs/ajax/libs/doony
     git clean -f
+    git checkout master
+    # Assumes you have the cdnjs repo as your upstream remote, and your
+    # personal repo as the "origin" remote.
+    git pull upstream master
     git checkout -b "doony-$VERSION" master
     mkdir -p "$VERSION"
     pushd "$VERSION"
