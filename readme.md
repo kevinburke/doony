@@ -8,6 +8,17 @@ your Jenkins user experience much better.
 Don't have admin access to your Jenkins instance? You can install it as
 a [Chrome extension](#chrome-extension)
 
+#### Good news!
+
+As of Jenkins version 1.570, some themes from Doony are getting merged back
+into the main project. Doony version **2.0** works with these updated themes.
+
+- If you are installing Doony on a Jenkins version **older** than 1.570, use
+  Doony version 1.6 (`git checkout 1.6`, in this repo)
+
+- If you are installing Doony on a Jenkins version **newer** than 1.570, use
+  the master version.
+
 ## Who's Using It
 
 Doony was made at [Twilio]( https://www.twilio.com ). It's also been forked/starred by
