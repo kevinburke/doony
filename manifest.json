@@ -9,9 +9,10 @@
     {
       "__comment__": "You need to add your own URL's here.",
       "matches": [
-        "https://jenkins.ci.cloudbees.com/*"
+        "https://jenkins.ci.cloudbees.com/*",
+        "http://localhost:8080/*"
       ],
-      "css": ["doony.css"],
+      "css": ["doony.min.css"],
       "js": ["src/vendor/jquery-2.0.3.js", "doony.js"]
     }
    ]
