@@ -564,16 +564,10 @@ textarea
 
 .yui-skin-sam #search-box {
     font-size: 16px;
-    padding: 5px 10px;
     background-image: none;
-    margin: 7px;
 }
 
 /******************* side panel styles ***********************/
-#side-panel {
-    padding-left: 15px;
-}
-
 #tasks {
     margin-top: 5px;
     font-size: 16px;
@@ -594,7 +588,7 @@ textarea
 }
 
 .task a:nth-child(n+1) {
-    padding: 10px 30px 10px 0;
+    padding: 10px 30px 5px 0;
     display: inline-block;
 }
 
@@ -673,10 +667,6 @@ body > pre a:visited,
 #main-panel > ul li
 {
     padding-bottom: 7px;
-}
-
-#main-panel {
-    padding-left: 15px;
 }
 
 a.yuimenulabel, a.yuimenuitemlabel,
