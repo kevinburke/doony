@@ -3,7 +3,7 @@
 # Update CDNJS with the latest version of Doony. Assumes you have a cdnjs
 # folder at the same level as the doony folder.
 
-set -ev
+set -eufv -o pipefail
 
 if [ $# -lt 1 ]; then
     echo "Please supply a tag number"
@@ -11,10 +11,11 @@ if [ $# -lt 1 ]; then
 fi
 
 VERSION="$1"
+CDNJS_DIR='cdnjs_full'
 
 git pull origin master
 
-pushd ../cdnjs/ajax/libs/doony
+pushd "../$CDNJS_DIR/ajax/libs/doony"
     git clean -f
     git checkout master
     # Assumes you have the cdnjs repo as your upstream remote, and your
@@ -30,10 +31,10 @@ pushd ../cdnjs/ajax/libs/doony
     sed -i.bak -E "s/\"version\": \"[[:digit:]]+\.[[:digit:]]+\"/\"version\": \"$VERSION\"/" package.json
 popd
 
-cp doony.min.css "../cdnjs/ajax/libs/doony/$VERSION/css"
-cp doony.min.js "../cdnjs/ajax/libs/doony/$VERSION/js"
+cp doony.min.css "../$CDNJS_DIR/ajax/libs/doony/$VERSION/css"
+cp doony.min.js "../$CDNJS_DIR/ajax/libs/doony/$VERSION/js"
 
-pushd ../cdnjs
+pushd "../$CDNJS_DIR"
     git add "ajax/libs/doony/$VERSION"
     git add "ajax/libs/doony/package.json"
     git commit -m "Added Doony version $VERSION"
