@@ -11,7 +11,7 @@ if [ $# -lt 1 ]; then
 fi
 
 VERSION="$1"
-CDNJS_DIR='cdnjs_full'
+CDNJS_DIR='cdnjs'
 
 git pull origin master
 
@@ -33,6 +33,7 @@ popd
 
 cp doony.min.css "../$CDNJS_DIR/ajax/libs/doony/$VERSION/css"
 cp doony.min.js "../$CDNJS_DIR/ajax/libs/doony/$VERSION/js"
+cp doony.js.map "../$CDNJS_DIR/ajax/libs/doony/$VERSION/js"
 
 pushd "../$CDNJS_DIR"
     git add "ajax/libs/doony/$VERSION"
