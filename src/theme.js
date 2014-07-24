@@ -108,12 +108,21 @@ jQuery(function($) {
         $("#main-panel").prepend(div);
     };
 
-    var doonyTitleLink = $("#top-panel a").first();
     var domain = getSubdomain(window.location.hostname);
-    doonyTitleLink.html("<div id='doony-title'>" + domain + "</div>");
+    var doonyTitleLink = $('#jenkins-home-link');
+    if (doonyTitleLink.length === 0) {
+        doonyTitleLink = $("#top-panel a").first();
+        doonyTitleLink.html("<div id='doony-title'>" + domain + "</div>");
+    } else {
+        doonyTitleLink.html(domain);
+        if (doonyTitleLink.parent("td").length === 0) {
+            // ugh, hack
+            doonyTitleLink.addClass("new-header-link");
+        }
+    }
 
     var color = colors[Math.abs(hashCode(domain)) % colors.length];
-    $("#top-panel").css('background-color', color);
+    $("#top-panel, #header").css('background-color', color);
 
     // Remove icons from the left hand menu and strip nbsp's
     $(".task").each(function() {

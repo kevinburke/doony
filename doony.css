@@ -742,6 +742,18 @@ a.yuimenulabel, a.yuimenuitemlabel,
   margin: 5px 10px;
 }
 
+#jenkins-home-link {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.new-header-link {
+  padding-top: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
 /* copied from twitter bootstrap */
 .doony-callout {
   margin: 0;
