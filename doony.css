@@ -693,7 +693,8 @@ textarea {
  * too.
  */
 body > pre,
-#main-panel > pre {
+#main-panel > pre,
+.console-output {
   font-size: 14px;
   background-color: #111;
   color: #eee;
