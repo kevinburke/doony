@@ -9,7 +9,7 @@ body.yui-skin-sam,
 .yui-skin-sam select {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 13px;
-  color: #333;
+  /*color: #333;*/
 }
 
 /*!
@@ -809,11 +809,18 @@ a.yuimenulabel, a.yuimenuitemlabel,
   background-image: radial-gradient(circle at 3px 3px, #f0ad4e 0%, #d58512 100%);
 }
 
-.doony-circle-notbuilt, .doony-circle-disabled {
+.doony-circle-notbuilt {
   background: #ababab;
   background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ababab 0%, #787878 100%);
   background-image: -webkit-radial-gradient(3px 3px, circle cover, #ababab, #787878);
   background-image: radial-gradient(circle at 3px 3px, #ababab 0%, #787878 100%);
+}
+
+.doony-circle-disabled {
+  background: #ababab;
+  background-image: -moz-radial-gradient(3px 3px 45deg, circle cover, #ababab 0%, #780d18 100%);
+  background-image: -webkit-radial-gradient(3px 3px, circle cover, #ababab, #780d18);
+  background-image: radial-gradient(circle at 3px 3px, #ababab 0%, #780d18 100%);
 }
 
 .doony-theme {
@@ -862,4 +869,38 @@ a.yuimenulabel, a.yuimenuitemlabel,
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+}
+
+/* Build pipeline settings */
+
+.yui-skin-sam table.SUCCESS {
+  background-color: #397439;
+  color: #f0f0f0;
+  font-weight: normal;
+}
+
+.yui-skin-sam table.FAILURE {
+  background-color: #ac2925;
+  color: #f0f0f0;
+  font-weight: normal;
+}
+
+.yui-skin-sam table.PENDING {
+  background-color: #2564ad;
+}
+
+.yui-skin-sam table.ABORT {
+  background-color: #787878;
+  color: #f0f0f0;
+  font-weight: normal;
+}
+
+.yui-skin-sam table.MANUAL {
+  background-color: #25a8ad;
+  color: #f0f0f0;
+  font-weight: normal;
+}
+
+tbody.pipelineGroup {
+  background-color: #ccc;
 }
