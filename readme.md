@@ -97,6 +97,7 @@ the default Jenkins styles.
 
     You can use these URLs:
 
+        # Or 2.1, depending on which version of Jenkins you are running.
         - https://cdnjs.cloudflare.com/ajax/libs/doony/1.6/css/doony.min.css
         - https://cdnjs.cloudflare.com/ajax/libs/doony/1.6/js/doony.min.js
 
@@ -132,4 +133,3 @@ within a series of vastly different constraints than I am. Consider:
     - they have to support every browser/platform/language
     - any change they make will make part of the userbase angry
     - every change has to be completely open-source friendly in every way
-
