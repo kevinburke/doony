@@ -805,8 +805,22 @@ a.yuimenulabel, a.yuimenuitemlabel,
   display: block;
 }
 
-.doony-circle {
+#projectstatus .doony-circle,
+.build-caption.page-headline .doony-circle {
   border-radius: 50%;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.status_success .doony-circle,
+.status_unstable .doony-circle,
+.status_failed .doony-circle {
+  border-radius: 0% !important;
+}
+
+.status_success, .status_unstable, .status_failed {
+  float: left;
+  width: 33%;
 }
 
 .doony-circle-aborted {
