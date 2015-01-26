@@ -5,7 +5,6 @@ body.yui-skin-sam,
 .yui-skin-sam td,
 .yui-skin-sam th,
 .yui-skin-sam p,
-.yui-skin-sam textarea,
 .yui-skin-sam select
 {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -517,7 +516,7 @@ input[type="button"].btn-block {
 
 /****************     end bootstrap styles        ********************/
 
-pre, code, .CodeMirror {
+pre, code, .CodeMirror, .yui-skin-sam textarea {
     font-family: Consolas, Monaco, monospace;
 }
 
@@ -640,7 +639,8 @@ textarea
  * too.
  */
 body > pre,
-#main-panel > pre {
+#main-panel > pre,
+.console-output {
     font-size: 14px;
     background-color: #111;
     color: #eee;
