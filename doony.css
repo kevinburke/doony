@@ -619,23 +619,6 @@ textarea {
 }
 
 /******************* side panel styles ***********************/
-.fixedGridLayout #main-panel {
-  margin-left: 300px;
-  margin-right: 5px;
-}
-
-#side-panel-content, #main-panel-content {
-  margin: 5px !important;
-}
-
-.fixedGridLayout #side-panel {
-  width: 300px;
-  padding-left: 5px;
-}
-
-#side-panel-content .task {
-  margin-bottom: 0px;
-}
 
 #tasks {
   margin: 5px;
