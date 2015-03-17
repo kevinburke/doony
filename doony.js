@@ -668,14 +668,15 @@ jQuery(function($) {
     var interval;
 
     var changeHeaderColor = function() {
-        var failures = $('div.doony-circle-failure').length;
-        var warnings = $('div.doony-circle-warning').length;
+        var failures = $('#projectstatus div.doony-circle-failure').length;
+        var warnings = $('#projectstatus  div.doony-circle-warning').length;
+        var success = $('#projectstatus  div.doony-circle-success').length;
         var header = $('div#header');
 
         header.removeClass();
         if(failures > 0) header.addClass('doony-circle-failure');
         else if (warnings > 0) header.addClass('doony-circle-warning');
-        else header.addClass('doony-circle-success');
+        else if (success > 0) header.addClass('doony-circle-success');
 
         if(interval !== undefined && !isABuildInProgress()) {
             clearInterval(interval); interval = undefined;
