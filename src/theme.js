@@ -361,7 +361,7 @@ jQuery(function($) {
             interval = setInterval(changeHeaderColor, 2000);
     };
 
-    setTimeout(changeHeaderColor, 1000);
+    setTimeout(changeHeaderColor, 500);
 
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
         "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
