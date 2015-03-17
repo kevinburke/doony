@@ -338,6 +338,28 @@ jQuery(function($) {
         }
     }
 
+    var isABuildInProgress = function() {
+        return $('canvas').length > 0;
+    };
+
+    var interval;
+    var changeHeaderColor = function() {
+        var failures = $('div.doony-circle-failure').length;
+        var warnings = $('div.doony-circle-warning').length;
+        var header = $('div#header');
+
+        header.removeClass();
+        if(failures > 0) header.addClass('doony-circle-failure');
+        else if (warnings > 0) header.addClass('doony-circle-warning');
+        else header.addClass('doony-circle-success');
+
+        if(interval !== undefined && !isABuildInProgress()) {
+            clearInterval(interval); interval = undefined;
+        }else if(interval === undefined && isABuildInProgress())
+            interval = setInterval(changeHeaderColor, 2000);
+    };
+    changeHeaderColor();
+
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
         "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
         "Doony theme</a></span>");
