@@ -343,6 +343,7 @@ jQuery(function($) {
     };
 
     var interval;
+
     var changeHeaderColor = function() {
         var failures = $('div.doony-circle-failure').length;
         var warnings = $('div.doony-circle-warning').length;
@@ -358,7 +359,8 @@ jQuery(function($) {
         }else if(interval === undefined && isABuildInProgress())
             interval = setInterval(changeHeaderColor, 2000);
     };
-    changeHeaderColor();
+
+    setTimeout(changeHeaderColor, 1000);
 
     $("#l10n-footer").after("<span class='doony-theme'>Browsing Jenkins with " +
         "the <a target='_blank' href='https://github.com/kevinburke/doony'>" +
