@@ -1,6 +1,6 @@
 # Doony
 
-<img src="http://doony.org/logosmall.png" alt="Doony logo" />
+<img src="https://github.com/kevinburke/doony/blob/gh-pages/logo.png" alt="Doony logo" />
 
 Doony is a series of UI improvements on top of Jenkins. Install this to make
 your Jenkins user experience much better.
