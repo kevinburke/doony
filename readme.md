@@ -133,3 +133,9 @@ within a series of vastly different constraints than I am. Consider:
     - they have to support every browser/platform/language
     - any change they make will make part of the userbase angry
     - every change has to be completely open-source friendly in every way
+
+## Donating
+
+Donations free up time to make improvements to the library, and respond to
+bug reports. You can send donations via Paypal's "Send Money" feature to
+kev@inburke.com. Donations are not tax deductible in the USA.
