@@ -1,6 +1,6 @@
 ## testresult.js
 
-This JavaScript is a front-end realization of the minor improvement for the Test Result page ([bug tracker issue 35486](https://issues.jenkins-ci.org/browse/JENKINS-35486)).
+This JavaScript is a lightweight front-end realization of the minor improvement for the Test Result page ([bug tracker issue 35486](https://issues.jenkins-ci.org/browse/JENKINS-35486)).
 The idea is to add a **"Total:"** row to the tables that contain test results, so the entire evolution can be tracked.
 
 A brief description of the JavaScript code:
