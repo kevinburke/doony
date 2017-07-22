@@ -75,11 +75,13 @@ if ((window.location.pathname).includes("testReport")) {
         switch (columns) {
             case 3:
                 newCells[0].appendChild(document.createTextNode("Total"));
+                newCells[0].style.textAlign = "";
                 newCells[0].style = "text-align:left; font-weight: bold;";
                 newCells[1].appendChild(document.createTextNode(totalDuration.toFixed(1).toString() + " sec"));
                 break;
             default:
                 newCells[0].appendChild(document.createTextNode("Total"));
+                newCells[0].style.textAlign = "";
                 newCells[0].style = "text-align:left; font-weight: bold;";
                 newCells[1].appendChild(document.createTextNode(totalDuration.toFixed(1).toString() + " sec"));
                 newCells[2].appendChild(document.createTextNode(totalFail.toString()));
