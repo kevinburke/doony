@@ -1,5 +1,11 @@
 /**
- * Created by Andrei on 7/16/2017.
+ * A front-end realization of the minor improvement for the Test Result page.
+ * Adds a "Total:" row to the tables that contain test results, so the entire evolution can be tracked.
+ * @link https://issues.jenkins-ci.org/browse/JENKINS-35486
+ *
+ * @authors Andrei Fedorov (afedorov@luc.edu), Gabriel Borcean (gborcean@luc.edu)
+ *
+ * For details see testresult.md
  */
 if ((window.location.pathname).includes("testReport")) {
     // for debugging
@@ -61,7 +67,7 @@ if ((window.location.pathname).includes("testReport")) {
         // create total row and its cells
         for (var i = 0; i < columns; i++) {
             newCells[i] = newRow.insertCell(i);
-            newCells[i].style.cssText = window.getComputedStyle(tableStyle).cssText;
+            newCells[i].style.textAlign = window.getComputedStyle(tableStyle).textAlign;
             newCells[i].style.fontWeight = "bold";
         }
 
@@ -69,12 +75,12 @@ if ((window.location.pathname).includes("testReport")) {
         switch (columns) {
             case 3:
                 newCells[0].appendChild(document.createTextNode("Total"));
-                newCells[0].style.textAlign = "text-align:left";
+                newCells[0].style = "text-align:left; font-weight: bold;";
                 newCells[1].appendChild(document.createTextNode(totalDuration.toFixed(1).toString() + " sec"));
                 break;
             default:
                 newCells[0].appendChild(document.createTextNode("Total"));
-                newCells[0].style.textAlign = "text-align:left";
+                newCells[0].style = "text-align:left; font-weight: bold;";
                 newCells[1].appendChild(document.createTextNode(totalDuration.toFixed(1).toString() + " sec"));
                 newCells[2].appendChild(document.createTextNode(totalFail.toString()));
                 newCells[4].appendChild(document.createTextNode(totalSkip.toString()));
