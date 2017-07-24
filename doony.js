@@ -433,19 +433,34 @@ jQuery(function($) {
         $("#main-panel").prepend(div);
     };
 
+    var isUrlExists = function (url) {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', url, false);
+        http.send();
+        return http.status!=404;
+    };
+
+
     var domain = getSubdomain(window.location.hostname);
+    var logoFile = "/userContent/logo.png"
+    var titleSeparator = " - "
+    var logoHtml = ""
+    // Load the Logo file, only if exists.
+    // CSS for #ID "doony-logo" will limit the height of the logo to 33px.
+    if (isUrlExists(logoFile)) {
+        logoHtml = "<img src='" + logoFile + "' id='doony-logo'>" + titleSeparator
+    }
+    var titleLink = "<div id='doony-title'>" + logoHtml + domain + "</div>"
     var doonyTitleLink = $('#jenkins-home-link');
+    doonyTitleLink.html(titleLink);
     if (doonyTitleLink.length === 0) {
         doonyTitleLink = $("#top-panel a").first();
-        doonyTitleLink.html("<div id='doony-title'>" + domain + "</div>");
     } else {
-        doonyTitleLink.html(domain);
         if (doonyTitleLink.parent("td").length === 0) {
             // ugh, hack
             doonyTitleLink.addClass("new-header-link");
         }
     }
-
     var color = colors[Math.abs(hashCode(domain)) % colors.length];
     $("#top-panel, #header").css('background-color', color);
 
